@@ -325,9 +325,11 @@ class RemoteSpec extends InputSpec {
 
 /// Default [RemoteSpecHeaderDelegate] used when retrieving a remote OAS spec.
 class RemoteSpecHeaderDelegate {
-  const RemoteSpecHeaderDelegate();
+  final String? tenant;
+  const RemoteSpecHeaderDelegate({this.tenant});
 
-  Map<String, String>? header() => null;
+  Map<String, String>? header() =>
+      tenant != null ? {'x-tenant-id': '$tenant'} : null;
 
   RemoteSpecHeaderDelegate.fromMap(Map<String, dynamic> map) : this();
 
