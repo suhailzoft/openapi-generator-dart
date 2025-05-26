@@ -10,7 +10,11 @@ dependencies:
   build: '>=1.0.0 <=3.0.0'
   source_gen: '>=1.0.0 <=2.0.0'
   path: '>=1.0.0 <=2.0.0'
-  openapi_generator_annotations: ^6.1.0
+  openapi_generator_annotations: 
+   git: 
+     url: https://github.com/suhailzoft/openapi-generator-dart
+     path: openapi-generator-annotations
+
   analyzer: '>5.12.0 <8.0.0'
   openapi_generator_cli: ^6.1.0
   crypto: '>=3.0.6 <=4.0.0'
